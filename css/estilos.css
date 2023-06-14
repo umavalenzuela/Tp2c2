@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Nunito+Sans:wght@200&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+}
+
+nav {
+    color: #000000;
+    width: 100vw;
+    height: 18.83vh;
+    background-color:#E6E6FA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    left: 0;
+    top: 19vh;
+    background-color:#E6E6FA;
+    width: 100vw;
+    padding: 2vw;
+    min-height: 30vh;
+
+}
+
+nav div {
+
+    display: flex;
+    width: 24.11%;
+
+    justify-content: space-between;
+
+}
+
+
+
+nav,
+header,
+main {
+    width: 100vw;
+    padding: 0 8.33vw;
+}
+
+section { 
+    width: 100%;
+    display: flex;
+   justify-content: space-between;
+   flex-wrap:wrap;
+   align-content: space-around;
+   
+   height: 100vh;
+
+}
+
+main div {
+    width: 45.83%;
+  
+
+}
+
+div img, video {
+
+width: 100%;
+
+}
+
+header {
+    height: 45.30vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: 40px;
+}
+
+h1,
+header h3,
+nav a,
+header a {
+    line-height: 125%;
+}
+
+nav h1 {
+
+    font-weight: 500;
+
+
+}
+
+header h1 {
+    font-family: 'Cinzel', serif;
+
+}
+
+header h3 {
+    text-transform: uppercase;
+    color: #000000;
+    letter-spacing: 5px;
+
+}
+
+header p {
+    font-size: 20px;
+}
+
+
+header a,
+nav a {
+    text-transform: capitalize;
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header a {
+
+    background-color: #E6E6FA;
+
+}
+
+nav span {
+    display: none;
+}
+
+/*oculto en la generalidad el menú hamburguesa*/
+
+.icon-menu::before {
+
+    color: #000000;
+    font-size: 4vw;
+
+
+}
+
+span.icon-menu:hover {
+    cursor: pointer;
+
+
+}
+
+
+.lightboxOverlay { background-color: gray;
+  
+
+}
+
+@media(max-width: 1024px) {
+  
+    nav div {
+        width: 50%;
+    }
+
+    header, section { 
+        margin-bottom: 20px;
+        height: auto;}
+
+}
+
+
+@media (max-width: 768px) {
+
+    nav div {
+        display: none;
+    }
+
+    /*desaparece el grupo de links*/
+
+    nav span {
+        display: inline;
+    }
+
+    section div {
+    width: 100%;
+    margin-bottom: 2vh;
+    
+
+    }
+
+    /*vuelvo a mostrar el menú hamburguesa*/
+
+}
+img {
+    transition-property: scale;
+    transition-duration: 1s;
+   
+}
+img:hover {
+
+   scale: 1.2;
+ 
+    }
+    
+nav a {
+    color: #000000;
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+nav a:hover {
+    color:#BA55D3
+}
+
+
+#agrandar {
+    display: inline-block;
+    animation: Agrandara 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes Agrandara {
+    0% {
+      font-size: 40px;
+    }
+    100% {
+      font-size: 50px;
+    }
+  }
+
+  .brillar {
+    animation: brillara 2s ease-in-out infinite;
+  }
+  
+  @keyframes brillara {
+    0% {
+      color: #000000;
+    }
+    50% {
+      color: #BA55D3;
+    }
+    100% {
+      color: #000000;
+    }
+  }
+
+
+  
+
+  footer {
+    background-color: #E6E6FA;
+    height: 125px;
+    width: 100vw;
+}
